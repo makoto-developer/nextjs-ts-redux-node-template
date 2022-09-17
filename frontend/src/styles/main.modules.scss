@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+body {
+  background-color: white;
+  font-size: 16px;
+  margin: 0;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    margin-left: 10px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  tr {
+    border-bottom: solid 1px #ddd;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d4f0fd;
+    }
+  }
+
+  th {
+    height: 100%;
+    text-align: left;
+
+    &:first-child {
+      text-align: center;
+    }
+  }
+
+  td {
+    height: 72px;
+  }
+}

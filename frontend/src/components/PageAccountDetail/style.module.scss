@@ -1,0 +1,70 @@
+.root {
+  padding: 20px;
+}
+
+.userList {
+  margin-top: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  width: 100%;
+}
+
+.settingWrap {
+  border: none;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 auto;
+
+}
+
+.setting {
+  font-size: 20px;
+  width: 150px;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+.gear {
+  margin-left: 4px;
+}
+
+
+.block {
+  display: flex;
+  align-items: center;
+}
+
+.name,
+.age,
+.role {
+  font-size: 20px;
+  margin-left: 12px;
+  margin-top: 8px;
+
+}
+
+.profile {
+  margin-top: 8px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.title {
+  margin-top: 12px;
+}

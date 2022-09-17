@@ -1,0 +1,51 @@
+.modal {
+  border: 1px solid #aaa;
+}
+
+
+.addButton {
+  margin-top: 20px;
+}
+
+
+.modalHeader {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.modalTitle {
+  width: 100%;
+}
+
+.closeModal {
+  height: 20px;
+  width: 20px;
+}
+
+.formBlock {
+  display: block;
+  margin-top: 10px;
+}
+
+.form {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.modalProfile {
+  min-height: 100px;
+  width: 100%;
+}
+
+.modalAvatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.modalAvatarInput {
+  width: 100%;
+}

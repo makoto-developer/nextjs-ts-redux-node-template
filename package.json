@@ -1,0 +1,45 @@
+{
+  "name": "frontend",
+  "scripts": {
+    "ws": "yarn workspace",
+    "fdev": "yarn ws frontend dev",
+    "bdev": "yarn ws backend dev",
+    "build": "yarn ws frontend build",
+    "lint": "eslint && stylelint **/*.scss --mw 0",
+    "lint-fix": "eslint ./ --fix",
+    "lint-style-fix": "stylelint **/*.scss --fix",
+    "export": "yarn ws frontend next export",
+    "storybook": "yarn ws storybook start"
+  },
+  "workspaces": [
+    "frontend",
+    "backend",
+    "types",
+    "tools"
+  ],
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "yarn@3.1.1",
+  "engines": {
+    "node": ">= 16"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "typescript-plugin-css-modules": "3.4.0",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "eslint-plugin-destructuring-newline": "0.0.2",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-import-newlines": "1.2.1",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "postcss-scss": "4.0.3",
+    "stylelint": "14.5.3",
+    "stylelint-config-recommended": "7.0.0",
+    "stylelint-order": "5.0.0",
+    "stylelint-scss": "4.1.0",
+    "typescript": "4.6.2"
+  }
+}
