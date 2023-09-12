@@ -1,30 +1,30 @@
-# JavaScriptフルスタックアプリ
-
-TypeScript/Node.js/Next.jsで作られている
+# フルスタックアプリ
 
 # Requirement
 
-以下のツールが必須です。
 - asdf
 - docker
 
-# Comment
-- このリポジトリはMonorepoです
-  - Yarn Workspaceを使っています。
-  - eslint/tsconfigはフロントエンド、バックエンドともに共有しています
-- 基本的にはJavaScriptのスキルセットがあれば開発可能なセットです(TypeScript/Node.js/Next.js/ES2021)
-
 # Stack
 
-## Frontend
-React, Next.js, TypeScript, Redux
+- Monorepo
+- Yarn Workspace
 
-## Backend
-Node.js ,TypeScript ,express ,Postgres
+Frontend
+- React
+- Next.js
+- TypeScript
+- Redux
+- axios
+
+Backend
+- Node.js
+- TypeScript
+- express
+- prisma(入れる予定)
+- PostgreSQL
 
 # Starting
-
-## Start App
 
 クローンして必要なライブラリなどを準備
 

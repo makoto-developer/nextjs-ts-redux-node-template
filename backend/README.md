@@ -1,13 +1,13 @@
-# バックエンド
+# Backend
 
-# 技術
+# Stack
 - Node.js
 - TypeScript
 - Express
 
-## 準備
+## Starting
 
-環境変数をコピーする(必要であれば編集する)
+環境変数をコピーして編集する
 
 ```zsh
 cp .env.example .env

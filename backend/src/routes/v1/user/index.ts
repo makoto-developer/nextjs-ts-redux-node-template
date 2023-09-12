@@ -49,6 +49,9 @@ router.get('/', async (req: ExpressRequest, res: ExpressResponse) => {
     }
 });
 
+/**
+ * ユーザ登録
+ */
 router.post('/', async (req: ExpressRequest, res: ExpressResponse) => {
   try {
     const {name, age, profile, avatar, role} = req.body
@@ -73,6 +76,9 @@ router.post('/', async (req: ExpressRequest, res: ExpressResponse) => {
   }
 });
 
+/**
+ * ユーザ情報を更新
+ */
 router.patch('/', async (req: ExpressRequest, res: ExpressResponse) => {
   try {
     const {id, name, age, profile, avatar, role} = req.body
@@ -98,6 +104,9 @@ router.patch('/', async (req: ExpressRequest, res: ExpressResponse) => {
   }
 });
 
+/**
+ * ユーザを削除
+ */
 router.delete('/', async (req: ExpressRequest, res: ExpressResponse) => {
   try {
     const {id} = req.body
