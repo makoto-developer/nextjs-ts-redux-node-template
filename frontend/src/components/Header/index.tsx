@@ -18,10 +18,10 @@ const Index: React.FC<Props> = props => {
       <nav>
         <ul>
           <li>
-            <Link href={PATHS.TOP}><a>ページ一覧</a></Link>
+            <Link href={PATHS.TOP}>ページ一覧</Link>
           </li>
           <li>
-            <Link href={PATHS.SETTINGS}><a>設定</a></Link>
+            <Link href={PATHS.SETTINGS}>設定</Link>
           </li>
         </ul>
       </nav>

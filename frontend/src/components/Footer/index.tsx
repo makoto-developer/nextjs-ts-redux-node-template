@@ -11,7 +11,7 @@ const Index: React.FC<Props> = props => {
 
   return (
     <footer className={c(s.footer, className)}>
-      2020 - @makoto-engineer
+      2020-2023@makoto-developer
     </footer>
   )
 }

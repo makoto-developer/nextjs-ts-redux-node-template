@@ -9,8 +9,9 @@ class PosgresAPI {
 
   public static init = () => {
     const port = env.POSTGRES_PORT || 5432
+    console.log("port:", port)
     PosgresAPI.client = new PostgresCleint({
-      user: env.POSTGRES_USER, // 環境変数から読み込みたい
+      user: env.POSTGRES_USER,
       host: env.POSTGRES_HOST,
       database: env.POSTGRES_DB,
       password: env.POSTGRES_PASSWORD,
@@ -45,10 +46,13 @@ class PosgresAPI {
         console.log("sql result: ", res.rows)
         return res.rows
       })
-      .catch(e => new Error(e.stack))
+      .catch(e => {
+        console.error("cause erro postgresql client err:", e)
+        new Error(e.stack)
+      })
       .finally(() => {
-        console.log('sql:', query.text)
-        console.log('sql param:', query.values)
+        console.info('sql:', query.text)
+        console.info('sql param:', query.values)
       })
   }
 

@@ -1,7 +1,6 @@
 import express from 'express';
 import router from './routes/v1/index';
 
-// 環境変数取得
 require('dotenv').config()
 const env = process.env
 
@@ -19,7 +18,6 @@ const allowCrossDomain = function(req: any, res: any, next: any) {
     'Content-Type, Authorization, access_token'
   )
 
-  // intercept OPTIONS method
   if ('OPTIONS' === req.method) {
     res.send(200)
   } else {
@@ -27,7 +25,6 @@ const allowCrossDomain = function(req: any, res: any, next: any) {
   }
 }
 app.use(allowCrossDomain)
-
 app.use('/v1', router);
 const port = process.env.BACKEND_PORT || env.APP_PORT || 25000;
 

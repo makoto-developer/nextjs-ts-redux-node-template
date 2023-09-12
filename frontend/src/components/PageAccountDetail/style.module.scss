@@ -13,8 +13,8 @@
 }
 
 .head {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .info {
@@ -22,31 +22,29 @@
 }
 
 .settingWrap {
-  border: none;
   background-color: white;
+  border: none;
   margin: 0 auto;
   padding: 0 auto;
-
 }
 
 .setting {
-  font-size: 20px;
-  width: 150px;
-  margin-right: auto;
-  display: flex;
   align-items: center;
+  display: flex;
+  font-size: 20px;
   justify-content: center;
   margin-bottom: auto;
+  margin-right: auto;
+  width: 150px;
 }
 
 .gear {
   margin-left: 4px;
 }
 
-
 .block {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .name,
@@ -55,13 +53,12 @@
   font-size: 20px;
   margin-left: 12px;
   margin-top: 8px;
-
 }
 
 .profile {
-  margin-top: 8px;
   border: 1px solid #aaaaaa;
   border-radius: 8px;
+  margin-top: 8px;
   padding: 12px;
 }
 

@@ -1,19 +1,20 @@
 import API from '../../util/api'
-import {GetUserListResponse} from "types/src/api/UserAPI";
 import {User, Users} from "types/src/domain/user"
+import {AxiosResponse} from "axios";
 
 export const getUser = async ({id, limit, cursor, next}: {id: number, limit?: number, cursor?: number, next?: number}) => {
-  const response: Users = await API.get<GetUserListResponse>({url:`/v1/user?id=${id}`})
-  return response
+  const response: AxiosResponse = await API.get({url: `/v1/user?id=${id}`})
+  return response.data
 }
 
 export const getUserList = async () => {
-  const response = await API.get<GetUserListResponse>({url: '/v1/user/'})
-  return response
+  const response: AxiosResponse = await API.get({url: '/v1/user/'})
+  console.log("get users res:", response)
+  return response.data
 }
 
 export const postUser = async (user: Omit<User, 'id'>) => {
-  const response = await API.post<any, any>({url: '/v1/user', data: user})
+  const response: AxiosResponse = await API.post<any, any>({url: '/v1/user', data: user})
   return response.data
 }
 

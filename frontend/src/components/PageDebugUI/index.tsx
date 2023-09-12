@@ -5,7 +5,6 @@ import Button from '../Button'
 
 import s from './style.module.scss'
 import Modal from "../Modal";
-import {ToastProvider, useToast} from "../../hooks/useToast";
 
 type Props = {
   className?: string
@@ -13,7 +12,6 @@ type Props = {
 
 const Index: React.FC<Props> = props => {
   const { className, children } = props
-  const showToast = useToast();
 
   const Slide = ({
     text,
@@ -77,8 +75,7 @@ const Index: React.FC<Props> = props => {
         </Modal>
       </Slide>
       <Slide text={'Toast'}>
-        <ToastProvider>test</ToastProvider>
-        <Button name={'Toast Open'} onClick={() => showToast({text: "ボタンが押されました"})} />
+        todo
       </Slide>
       <Slide text={'Image'} />
       <Slide text={'Loading'} />

@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:14.5
+    image: postgres:15.4
     restart: always
-    container_name: local-postgres
-    hostname: local-postgres
+    container_name: fullstack-nextjs-app-postgres
+    hostname: docker-postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}

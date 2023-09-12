@@ -8,18 +8,24 @@ const router = express.Router();
 type ExpressRequest = express.Request
 type ExpressResponse = express.Response
 
+/**
+ * get user list
+ * idをクエリパラメータにして特定のユーザを返す
+ * TODO ページネーションも将来的に実装予定
+ */
 router.get('/', async (req: ExpressRequest, res: ExpressResponse) => {
+  console.log("user get id", req.query)
   const getUserById = async () => {
     const {id, limit, cursor, next} = req.query
-    // TODO ページネーション実装
-    const sql = `select * from users ${id && `where id = ${id}`}`
+    const sql = `select * from users`
     try {
       const query = {
         text: sql
       }
       const data = await PostgresAPI.executeQuery({query})
+      console.log("get data from db:", data)
       return data
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.log('error:', e)
       res.status(HttpStatus.Bad_Request);
     }

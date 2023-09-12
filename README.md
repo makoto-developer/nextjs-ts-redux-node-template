@@ -26,17 +26,19 @@ Node.js ,TypeScript ,express ,Postgres
 
 ## Start App
 
-**事前準備**
+クローンして必要なライブラリなどを準備
 
 ```shell
 git clone git@github.com:makoto-developer/nextjs-ts-redux-node-template.git
 cd nextjs-ts-redux-node-template
 asdf install
 # yarnがなければインストールする
-yarn install
+brew install yarn
+or
+npm i -g yarn
 ```
 
-**.envを用意する**
+`.env`を用意する
 
 ```shell
 cp backend/.env.example backend/.env
@@ -44,7 +46,13 @@ cp frontend/.env.example frontend/.env
 cp docker/.env.example docker/.env
 ```
 
-**DBを起動**
+パスワードとかポートとか適宜修正する
+
+```shell
+vi .env
+```
+
+データベースを立ち上げる
 
 ```shell
 cd docker
@@ -54,13 +62,19 @@ docker-compose up -d
 docker ps -a
 ```
 
-**バックエンドを起動**
+seedsを使って初期データを投入する
+
+```shell
+seeds/user.sql
+```
+
+バックエンドを起動
 
 ```shell
 yarn bdev
 ```
 
-**フロントエンドを起動**
+フロントエンドを起動
 
 ```shell
 yarn fdev

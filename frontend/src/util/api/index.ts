@@ -1,4 +1,4 @@
-import axios, {AxiosInstance, AxiosRequestConfig} from 'axios'
+import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios'
 
 class ApiClient {
   private static axios: AxiosInstance
@@ -8,8 +8,8 @@ class ApiClient {
   }
 
   private static init = (token?: string) => {
-    // TODO ここは環境変数で設定したい
-    const baseURL = 'http://localhost:25000'
+    const baseURL = process.env.NEXT_PUBLIC_APP_BACKEND_BASE_URL
+    console.log("baseURL:", baseURL)
     ApiClient.axios = ApiClient.createAxiosInstance(baseURL)
     if (token) ApiClient.setToken(token)
   }
@@ -20,12 +20,12 @@ class ApiClient {
     }
   }
 
-  private static createAxiosInstance = (baseURL: string) => {
-    console.log("baseURL:", baseURL)
-    if (!baseURL) throw new Error('base url is required.')
+  private static createAxiosInstance = () => {
+    const baseURL = process.env.NEXT_PUBLIC_APP_BACKEND_BASE_URL
+    if (!baseURL) throw new Error('base_url is not correct.')
     const instance = axios
       .create({
-        baseURL, // TODO .envから読み込むように変更
+        baseURL,
         headers: {
           'Content-Type': 'application/json',
         },
@@ -54,7 +54,7 @@ class ApiClient {
     return Promise.reject(config)
   }
 
-  async get<Response>({url}: {url: string}) {
+  async get({url}: { url: string }): Promise<AxiosResponse> {
     ApiClient.initIfNot()
     try {
       console.log('url:', url)

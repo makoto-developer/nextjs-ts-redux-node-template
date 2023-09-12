@@ -12,6 +12,6 @@ export default function handler(
   res: NextApiResponse<Data>,
 ) {
   res.status(200).json({
-    name: 'makoto-engineer',
+    name: 'makoto-developer.net',
   })
 }
