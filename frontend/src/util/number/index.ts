@@ -14,7 +14,9 @@ export const isNumeric = (n: unknown): boolean => {
 }
 
 /**
- * 有効な数値でない場合はnullを返却
+ * 正の数であるかどうかを判定する
+ * - 有効な数値でない場合はnullを返却 // TODO ここはerrorをthrowすべきか?
+ * - 負の数はfalseを返す
  */
 export const positiveNumber = (n: unknown): boolean | null => {
   const [positive, negative] = [true, false]

@@ -4,6 +4,7 @@
 - Node.js
 - TypeScript
 - Express
+- Prisma(予定)
 
 ## Starting
 

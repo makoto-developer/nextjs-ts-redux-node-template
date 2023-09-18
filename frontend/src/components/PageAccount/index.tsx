@@ -12,6 +12,8 @@ type Props = {
 
 const Index: React.FC<Props> = props => {
   const {className} = props
+
+  // TODO この辺りを改良したい
   const {
     users,
     back,

@@ -56,7 +56,7 @@ vi .env
 
 ```shell
 cd docker
-docker-compose up -d
+docker compose up -d
 
 # PostgreSQLが起動したことを確認する
 docker ps -a
