@@ -34,8 +34,6 @@ cd nextjs-ts-redux-node-template
 asdf install
 # yarnがなければインストールする
 brew install yarn
-or
-npm i -g yarn
 ```
 
 `.env`を用意する
