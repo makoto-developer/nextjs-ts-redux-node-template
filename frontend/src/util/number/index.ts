@@ -17,6 +17,7 @@ export const isNumeric = (n: unknown): boolean => {
     return numeric
 }
 
+
 /**
  * 正の数であるかどうかを判定する
  * - 有効な数値でない場合はnullを返却
